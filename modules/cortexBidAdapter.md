@@ -11,6 +11,15 @@ Maintainer: dev@cortextech.it
 Connects to Cortex exchange for bids.
 Cortex bid adapter supports Banner, Video (instream and outstream) and Native.
 
+# Bid Params
+
+| Name | Scope | Description | Example | Type |
+|---|---|---|---|---|
+| placementId | optional* | Placement ID from the Cortex platform. Required when `endpointId` is not set. | `'testBanner'` | `string` |
+| endpointId | optional* | Endpoint ID from the Cortex platform. Required when `placementId` is not set. | `'testEndpoint'` | `string` |
+
+\* At least one of `placementId` or `endpointId` must be provided.
+
 # Test Parameters
 ```
     var adUnits = [
